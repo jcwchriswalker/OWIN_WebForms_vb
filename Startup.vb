@@ -6,8 +6,6 @@ Imports Owin
 
 Partial Public Class Startup
     Public Sub Configuration(app As IAppBuilder)
-        '  ConfigureAuth(app)
-        app.UseCookieAuthentication(New CookieAuthenticationOptions() With {
-        .LoginPath = New PathString("/Login.aspx")})
+        ConfigureAuth(app)
     End Sub
 End Class

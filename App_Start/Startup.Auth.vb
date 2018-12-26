@@ -10,9 +10,7 @@ Imports Owin
 
 Partial Public Class Startup
 
-    ' For more information on configuring authentication, please visit https://go.microsoft.com/fwlink/?LinkId=301883
-    Public Sub ConfigureAuthSFO(app As IAppBuilder)
-        ' need to add UserManager into owin, because this Is used in cookie invalidation
+    Public Sub ConfigureAuth(app As IAppBuilder)
         app.UseCookieAuthentication(New CookieAuthenticationOptions With
             {
                 .AuthenticationType = "ApplicationCookie",
